@@ -158,10 +158,19 @@ const Main = () => {
             <h2>Revenue Resources</h2>
             <FaEllipsisV color="gray" className="cursor-pointer" />
           </div>
-          <div>
+          <div className="pl-[35px] pb-[35px]">
             <PieComponent />
           </div>
         </div>
+      </div>
+      <div className="flex mt-[22px] w-full gap-[30px]">
+        <div className="basis-[55%] bg-white shadow-md cursor-pointer rounded-[4px]">
+          <div className="bg-[#F8F9FC] flex items-center justify-between py-[15px] px-[20px] border border-b-[1px]  border-[#EDEDED]">
+            <h2>Project Overview</h2>
+            <FaEllipsisV color="gray" className="cursor-pointer" />
+          </div>
+        </div>
+        <div className="basis-[45%] border">d</div>
       </div>
     </div>
   );
