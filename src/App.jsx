@@ -11,7 +11,7 @@ const App = () => {
       <div className="basis-[14%] h-[100vh]  ">
         <Sidebar />
       </div>
-      <div className="basis-[86%] border">
+      <div className="basis-[86%] border h-[100vh] overflow-scroll">
         <DashboardView />
         <div>
           <Outlet />

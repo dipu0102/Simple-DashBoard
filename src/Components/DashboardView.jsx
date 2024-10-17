@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaEnvelope, FaRegBell, FaSearch } from "react-icons/fa";
 import profile from "../assets/react.svg";
 const DashboardView = () => {
+  const [open, setOpen] = useState(false);
+  const showDropDown = () => {
+    setOpen(!open);
+  };
   return (
     <div className="flex items-center justify-between h-[70px] shadow-lg px-[25px]">
       <div className="flex items-center rounded-[5px]">
@@ -19,11 +23,28 @@ const DashboardView = () => {
           <FaRegBell />
           <FaEnvelope />
         </div>
-        <div className="flex items-center gap-[15px] relative">
+        <div
+          className="flex items-center gap-[15px] relative"
+          onClick={showDropDown}
+        >
           <p>Dipankar Garai</p>
           <div className="h-[50px] w-[50px] rounded-full bg-[#4E73DF] flex items-center justify-center relative">
             <img src={profile} alt="" />
           </div>
+          {open && (
+            <div className="bg-white border h-[120px] w-[150px] absolute bottom-[-135px] z-20 right-0 pt-[15px] pl-[15px]">
+              <p className="cursor-pointer hover:text-[blue] font-semibold">
+                Profile
+              </p>
+              <p className="cursor-pointer hover:text-[blue] font-semibold">
+                Settings
+              </p>
+
+              <p className="cursor-pointer hover:text-[blue] font-semibold">
+                Log out
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>
